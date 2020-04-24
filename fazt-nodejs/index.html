@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+		<!-- DWR Scripts -->
+		<script type='text/javascript' src='/AplicacionCrediteka/dwr/engine.js'></script>
+		<script type="text/javascript" src="/AplicacionCrediteka/dwr/util.js"></script>
+		<script type='text/javascript' src='/AplicacionCrediteka/dwr/interface/ManejaInfoCliente.js'></script>
+		<!-- Page Scripts -->
+		<script type="text/javascript" src="js/auxiliar.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#changeBancario").click(function(){
+					$(location).attr('href','indexG.jsp');						
+				});
+			});
+			function getLoggedUsr(){
+				return $('#loggedUsr').val();
+			}
+        </script>    
+        
+</head>
+<body>
+    
+</body>
+</html>
