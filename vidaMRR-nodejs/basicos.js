@@ -12,7 +12,7 @@ console.log(__dirname);// __dirname es una variable que existe
 //de forma global aq lo largo de toda la aplicación
 console.log(__filename);*/
 
-/* Los modulos son fragmentos de codigoque nos permiten extender 
+/* Los modulos son fragmentos de código que nos permiten extender 
     las funcionalidades en nuestras aplicaciones, esto se realiza 
     con require(es equivalente a import en java), exports, etc.*/
 var path = require("path");//path es un modulo contiene la direcciones
