@@ -1,5 +1,4 @@
-/* 
-Readline nos hace mas eficiente la i/o de datos */
+/* Readline nos hace mas eficiente la i/o de datos */
 
 /* Ejemplo con readline.
 console.log("inicio");
@@ -11,6 +10,9 @@ var rl = readline.createInterface(process.stdin, process.stdout);
     process.exit();
 });  */
 
+/*aplicación que toma los comentarios y los imprime en pantalla
+  a fin de mostrar el uso de readline en input y output*/ 
+var util = require('util');
 var readline = require('readline');
 var rl = readline.createInterface(process.stdin, process.stdout);
 
@@ -26,9 +28,10 @@ rl.question('¿Cuál es tu nombre?: ' ,(respuesta)=>{
 
 });
 
-rl.on('line', (input)=>{
-  if(input.trim()==='salir'){
-    var mensaje = util.format("Hola %s, estos son tus comentarios: %j", persona.nombre,persona.comentarios);
+rl.on('line', (input)=>{ 
+  if(input.trim()==='s'){
+    var mensaje = util.format("Hola %s, estos son tus comentarios: %j",
+    persona.nombre, persona.comentarios);
     console.log(mensaje);
     process.exit();
   }  
@@ -37,4 +40,4 @@ rl.on('line', (input)=>{
   rl.prompt();
 });
   
-//*/
+// */

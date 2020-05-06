@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Pokemon</title>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: darkblue;
+        }
+    </style>
+    <img src="foto.jpg" id="pokemon" height="200">
+</head>
+<body>
+    <script>
+        const pokemon = document.querySelector('#pokemon');
+        function renderPokemon(image) {
+            pokemon.setAttribute('src', image);
+        }
+        /* con solo llamar a fetch ya estamos utilizando su API 
+            fetch solo requiere un parámetro URL y otro opcional
+            que depende del tipo de peticiones se van a solicitar,
+            o que datos se enviaran al API
+        */
+        fetch('pokemon.json')/* fetch devuelve promesas */
+            .then((Response)=>{
+                debugger;
+            });
+    </script>
+</body>
+</html>

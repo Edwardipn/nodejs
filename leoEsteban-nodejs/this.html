@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>This es el objeto contexto de JS en el cual </h3>
+    <h3>se está ejecutando el código actual</h3>
+    <h1 id="container" class="container"></h1>
+    <!-- En este script se vió que this es el objeto global 
+        que posee a window, y dentro de window vive todo lo 
+        que hay adentro del navegador
+
+    <script>
+        const container = document.querySelector('#container');
+        function renderName/* renderName indica pasar el nombre */(name) {
+            container.textContent = `Pokemon encontrado ${name}`;
+        }
+        function renderType(type) {
+            console.log(this);
+            container.textContent = `Es de tipo ${type}`;
+        }
+        console.log(this);
+        //renderName('Pikachu'); 
+        renderType('Electric'); 
+
+        /* ¿Dónde estoy ejecutando mi código? #CONTEXTO */
+
+        /* this en Node */
+        /* this en Browser */
+
+    </script>
+ -->    
+ <!-- En el siguiente tag vamos a aplicar el anterior funcionamiento 
+        pero con un objeto -->
+<!--     <script>
+        /* this en Node */
+        /* this en Browser */
+
+        /* Objeto pokemon */
+        const pokemon = {
+            container: document.querySelector('#container'),
+            renderName: function(name){
+                pokemon.container.textContent = `Pokemon encontrado ${name}`
+            },
+            renderType: function (type) {
+                this.container.textContent = `Es de tipo ${type}`
+            }
+        }
+        //pokemon.renderName('Bulbasaurr');
+        const renderName = pokemon.renderName;
+        const renderType = pokemon.renderType;
+
+        //renderName('Pikachu'); 
+        renderType('Electric'); 
+    </script>
+     -->
+<!-- A continuación se verá como se utiliza "this" con clases e instancias. -->
+    <script>
+        class Pokemon {
+            container = document.querySelector('#container');
+            renderName(name){
+                container.textContent = `Pokemon encontrado ${name}`;
+            }
+            renderType(type) {
+                this.container.textContent = `Es de tipo ${type}`;
+            }
+        }
+        const pikachu = new Pokemon();
+        pikachu.renderName('Pikachu...');
+//        pikachu.renderType('Electric...');
+
+    </script>
+</body>
+</html>
