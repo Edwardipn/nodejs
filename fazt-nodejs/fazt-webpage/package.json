@@ -1,0 +1,29 @@
+{
+  "name": "fazt-nodejs",
+  "version": "0.0.1",
+  "description": "Curso de node.js con fazt",
+  "main": "http.js",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "ejs": "^3.1.2",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  },
+  "scripts": {
+    "start": "node src",
+    "dev": "nodemon src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edwardipn/nodejs.git"
+  },
+  "author": "Ed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edwardipn/nodejs/issues"
+  },
+  "homepage": "https://github.com/edwardipn/nodejs#readme"
+}
