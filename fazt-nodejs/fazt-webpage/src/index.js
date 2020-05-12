@@ -1,18 +1,20 @@
 
 const express = require('express');
-const app = express();
+const server = express();
+const path = require('path');
 
-//settings
-app.set('port',3000);
+//settings de express
+server.set('port',3000);
+server.set('views',path.join(__dirname,'views'));
+server.engine('html', require('ejs').renderFile);
+server.set('view engine', 'ejs');
 
 //middleware
 
 //routes
-app.get('/', (req,res)=>{
-    res.send('<h1>Hello World !</h1>')
-});
+server.use(require('./routers/router'));
 
 //listening server
-app.listen(app.get('port'), ()=>{
+server.listen(server.get('port'), ()=>{
     console.log('Server listening!');
 });
